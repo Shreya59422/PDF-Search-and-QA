@@ -1,106 +1,67 @@
-\# 🔒 Private Offline PDF RAG Assistant
+# PDF-Search-and-QA
 
+PDF-Search-and-QA is a document question-answering system built using Retrieval-Augmented Generation (RAG).
 
+Project Overview
 
-A Retrieval-Augmented Generation (RAG) based AI assistant that allows users to upload PDF documents and ask contextual questions about them.
+This project demonstrates:
+- Document parsing
+- Text chunking
+- Embedding generation
+- Vector similarity search
+- Local language model integration
 
+System Architecture
 
+1. User uploads a PDF.
+2. Text is cleaned and split into chunks.
+3. Embeddings are generated.
+4. Embeddings are stored in FAISS.
+5. User query retrieves relevant chunks.
+6. Retrieved context is passed to Phi model.
+7. Model generates contextual answer.
 
-\##  Features
+Tech Stack
 
+- Python
+- Streamlit
+- LangChain
+- FAISS
+- Sentence Transformers
+- Ollama
+- Phi Model
 
+Setup Instructions
 
-\- Upload PDF documents
-
-\- Semantic chunking and embedding generation
-
-\- Vector search using FAISS
-
-\- Context-grounded answer generation
-
-\- Chat-style interface
-
-\- Fully offline execution using Ollama (Phi model)
-
-
-
-\##  Architecture
-
-
-
-1\. PDF uploaded and parsed using PyPDFLoader.
-
-2\. Text cleaned and split into chunks.
-
-3\. Embeddings generated using sentence-transformers.
-
-4\. Chunks stored in FAISS vector database.
-
-5\. User query retrieves top relevant chunks.
-
-6\. Retrieved context injected into local LLM (Phi).
-
-7\. Model generates grounded answer.
-
-
-
-\##  Tech Stack
-
-
-
-\- Python
-
-\- Streamlit
-
-\- LangChain
-
-\- FAISS
-
-\- Sentence Transformers
-
-\- Ollama (Phi)
-
-
-
-\## How To Run
-
-
+Clone the repository:
+git clone https://github.com/YOUR_USERNAME/PDF-Search-and-QA.git
 
 Install dependencies:
-
-
-
 pip install -r requirements.txt
 
-
-
 Install Ollama:
-
 https://ollama.com/download
 
-
-
 Pull model:
-
-
-
 ollama pull phi
 
-
-
-Run:
-
-
-
+Run application:
 streamlit run app.py
 
+Features
 
+- Upload PDF
+- Semantic retrieval
+- Context-aware answers
+- Chat interface
+- Fully offline
 
-\##  Note
+Limitations
 
+- Performance depends on CPU
+- Smaller local models give shorter answers
+- Prototype system
 
+Purpose
 
-Designed as a privacy-focused document intelligence system demonstrating real-world RAG architecture.
-
-
-
+This project demonstrates practical implementation of RAG architecture for document intelligence systems.

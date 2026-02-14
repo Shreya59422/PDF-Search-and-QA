@@ -1,8 +1,8 @@
-PDF-Search-and-QA
+**PDF-Search-and-QA**
 
 PDF-Search-and-QA is a document question-answering system built using Retrieval-Augmented Generation (RAG). The application allows users to upload PDF documents and ask contextual questions about their content using semantic search and a locally deployed language model.
 
-Project Overview
+**Project Overview**
 
 This project demonstrates how modern AI systems combine document parsing, text chunking, embedding generation, vector similarity search, and local large language model integration.
 
@@ -10,7 +10,7 @@ The system retrieves relevant document sections using FAISS vector search and ge
 
 It is designed as a placement-ready AI systems prototype.
 
-System Architecture
+**System Architecture**
 
 User uploads a PDF document.
 
@@ -30,7 +30,7 @@ Retrieved context is passed to the local LLM.
 
 The Phi model generates a contextual answer based only on retrieved information.
 
-Tech Stack
+**Tech Stack**
 
 Python
 Streamlit
@@ -40,27 +40,27 @@ Sentence Transformers
 Ollama
 Phi Model
 
-Setup Instructions
+**Setup Instructions**
 
-Clone the repository:
+1. Clone the repository:
 git clone https://github.com/Shreya59422/PDF-Search-and-QA.git
 
-Install Python dependencies:
+2. Install Python dependencies:
 pip install -r requirements.txt
 
-Install Ollama from:
+3. Install Ollama from:
 https://ollama.com/download
 
-Verify installation:
+4. Verify installation:
 ollama --version
 
-Pull the Phi model:
+5. Pull the Phi model:
 ollama pull phi
 
-Run the application:
+6. Run the application:
 streamlit run app.py
 
-Features
+**Features**
 
 Upload any PDF document
 Semantic chunk-based retrieval
@@ -70,13 +70,14 @@ Chat-style interface
 Fully offline execution
 Privacy-focused design
 
-Limitations
+**Limitations**
 
 Performance depends on CPU capability
 Smaller local models may generate shorter answers
 Designed as a prototype demonstration
 Not optimized for large-scale production deployment
 
-Purpose
+**Purpose**
 
 This project demonstrates practical implementation of Retrieval-Augmented Generation (RAG) architecture for document intelligence systems. It showcases embedding-based semantic search, vector database integration, context-aware answer generation, and offline AI deployment trade-offs.
+
